@@ -1,31 +1,100 @@
-body{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: brown;
+:root {
+  --bg-body: #467887;
+  --bg-image: #bedcdce6;
+  --border-image: #ffffff;
+  --text-btn: #ffffff;
+  --text: #ffffff;
+  --bg-btn: #144f56;
+  --shadow-btn: #bedcdce6;
+  --bg-btn-hover: #47787d;
+  --text-btn-hover: #ffffff;
+  --bg-btn-active: #5794be;
+  --text-btn-active: #ffe23d;
+  --transform-slow: 0.6s ease;
+  --transform-normal: 0.4s ease;
+  --transform-fast: 2s ease;
 }
-.image-container{
-    text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.image-container img{
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: lightcyan;
-    width: 300px;
-    height: 300px;
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-body);
 }
-.btn{
-    background-color: slateblue;
-    border: none;
-    padding: 10px 20px;
-    margin: 20px;
-    color:white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px auto;
 }
-.byn:hover{
-    opacity: 0.9;
+
+.header h1 {
+  margin-bottom: 10px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--text);
+}
+
+.header h3 {
+  margin-bottom: 2.5px;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.header p {
+  margin: 2.5px auto;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+  margin: 10px;
+  border-radius: 20px;
+  border: 0.5px solid var(--border-image);
+  box-shadow: 0 0 5px 2px var(--shadow-btn);
+  background-color: var(--bg-image);
+  width: 300px;
+  height: 300px;
+}
+
+.btn {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  background-color: var(--bg-btn);
+  border: 0.2px solid var(--border-image);
+  padding: 10px 20px;
+  margin: 20px;
+  color: var(--text-btn);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0.5px var(--shadow-btn);
+  cursor: pointer;
+  transition:
+    color var(--transform-normal),
+    backgrount-color var(--transform-normal);
+}
+
+.btn:hover {
+  background-color: var(--bg-btn-hover);
+  color: var(--text-btn-hover);
+}
+
+.btn:active {
+  background-color: var(--bg-btn-active);
+  color: var(--text-btn-active);
+  font-weight: 500;
 }
